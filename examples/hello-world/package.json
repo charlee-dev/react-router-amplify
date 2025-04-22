@@ -1,31 +1,38 @@
 {
-  "name": "react-router-amplify-hosting-example-hello-world",
+  "name": "@t6c/web",
   "private": true,
   "type": "module",
+  "scripts": {
+    "prebuild": "pnpm clean && pnpm typecheck",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "node .amplify-hosting/compute/default/server.mjs",
+    "typecheck": "react-router typegen && tsc"
+  },
   "dependencies": {
-    "@react-router/dev": "^7.2.0",
     "@react-router/express": "^7.2.0",
-    "@react-router/node": "^7.2.0",
+    "@react-router/node": "^7.4.0",
+    "@react-router/serve": "^7.4.0",
     "compression": "^1.8.0",
     "express": "^4.21.2",
     "isbot": "^5.1.17",
     "morgan": "^1.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.2.0"
+    "react-router": "^7.4.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.4",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "typescript": "^5.7.3",
+    "@react-router/dev": "^7.4.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "react-router-devtools": "^1.1.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
     "vite": "^6.3.0",
-    "vite-plugin-react-router-amplify-hosting": "workspace:*"
-  },
-  "scripts": {
-    "prebuild": "pnpm clean && pnpm typecheck",
-    "build": "react-router build",
-    "typecheck": "react-router typegen && tsc",
-    "clean": "rm -rf build && rm -rf .react-router && rm -rf .amplify-hosting"
+    "vite-plugin-react-router-amplify-hosting": "workspace:*",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
