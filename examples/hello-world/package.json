@@ -1,8 +1,9 @@
 {
-  "name": "@t6c/web",
+  "name": "hello-world",
   "private": true,
   "type": "module",
   "scripts": {
+    "clean": "rm -rf build && rm -rf .react-router && rm -rf .amplify-hosting",
     "prebuild": "pnpm clean && pnpm typecheck",
     "build": "react-router build",
     "dev": "react-router dev",
