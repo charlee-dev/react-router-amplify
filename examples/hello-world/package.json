@@ -27,5 +27,8 @@
     "build": "react-router build",
     "typecheck": "react-router typegen && tsc",
     "clean": "rm -rf build && rm -rf .react-router && rm -rf .amplify-hosting"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

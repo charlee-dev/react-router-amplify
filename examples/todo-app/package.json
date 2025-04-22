@@ -41,5 +41,8 @@
     "vite": "^6.3.0",
     "vite-plugin-react-router-amplify-hosting": "workspace:*",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
